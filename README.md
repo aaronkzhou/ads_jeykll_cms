@@ -1,37 +1,40 @@
-[![Gem Version](https://img.shields.io/gem/v/jekyll-admin.svg)](https://rubygems.org/gems/jekyll-admin)
-[![Build Status](https://travis-ci.org/jekyll/jekyll-admin.svg?branch=master)](https://travis-ci.org/jekyll/jekyll-admin)
-[![Build status](https://ci.appveyor.com/api/projects/status/biop1r6ae524xlm2/branch/master?svg=true)](https://ci.appveyor.com/project/benbalter/jekyll-admin/branch/master)
-[![NPM Dependencies](https://david-dm.org/jekyll/jekyll-admin.svg)](https://david-dm.org/jekyll/jekyll-admin)
+To install locally
 
-A Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites. The project is divided into two parts. A Ruby-based HTTP API that handles Jekyll and filesystem operations, and a Javascript-based front end, built on that API.
+git clone https://github.com/jekyll/jekyll-admin && cd jekyll-admin
+script/bootstrap
+This will copy down the code and install all Node and Ruby dependencies.
 
-![screenshot of Jekyll Admin](/screenshot.png)
+Running tests
 
-## Installation
+script/cibuild
 
-Refer to the [installing plugins](https://jekyllrb.com/docs/plugins/#installing-a-plugin) section of Jekyll's documentation and install the `jekyll-admin` plugin as you would any other plugin. Here's the short version:
+This will run both Node and Ruby tests.
 
-1. Add the following to your site's Gemfile:
+You can run one or the other with script/cibuild-node and script/cibuild-ruby.
 
-    ```ruby
-    gem 'jekyll-admin', group: :jekyll_plugins
-    ```
+Running Jekyll Admin locally
 
-2. Run `bundle install`
+There is a site in spec/fixtures/site, with some dummy content. Both local development servers below use that site’s dummy content for development. Feel free to make any changes you’d like, just don’t commit them, unless you’re adding a new fixture (e.g., for a test).
 
-## Usage
+Running a test server with a dummy site
 
-1. Start Jekyll as you would normally (`bundle exec jekyll serve`)
-2. Navigate to `http://localhost:4000/admin` to access the administrative interface
+If you just want to click around and see how things work, or if you’re making changes to the Ruby back end side of things, this is probably what you want.
 
-## Contributing
+Run script/build to compile the static frontend
+Run script/test-server to start the server
+Open http://localhost:4000/admin in your browser (or http://localhost:4000/_api)
+Running the front end server in development mode
 
-Interested in contributing to Jekyll Admin? We’d love your help. Jekyll Admin is an open source project, built one contribution at a time by users like you. See [the contributing instructions](.github/CONTRIBUTING.md), and [the development docs](http://jekyll.github.io/jekyll-admin/development/) for more information.
+script/server-frontend
 
-## Looking for a hosted version?
+This will run the front end server via Node’s development stack, meaning changes will be reloaded on subsequent requests and is generally useful when making changes to the front end side of things. In the background, it’s also going to call script/test-server for you, so that the front end has an API that it can make calls to.
 
-Jekyll Admin is intended to be run on your computer alongside your local Jekyll installation. If you're looking for a hosted version, we'd recommend checking out [Siteleaf](https://www.siteleaf.com/) a hosted Jekyll editor with deep GitHub integration (whom we'd also like to thank for inspiring parts of Jekyll Admin itself!).
+Running installation/test scripts on Windows
 
-## License
+You are going to need a Unix-like environment. The best choice would be Git Bash which comes with the Git Windows Installation or MSYS. Try to avoid any POSIX compliant software (e.g. Cygwin) that will get you in trouble.
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The environment flag
+
+When developing locally, it can be helpful to see error backtraces, disable template caching, have expanded request logs, and to allow cross-origin requests between the Ruby server and the Node server. By default, however, JekyllAdmin runs in production mode, meaning these development features are disabled.
+
+To enable the development features, set the environmental variable RACK_ENV to development. When enabled, the /_api/ endpoint will add Access-Control-Allow-Origin: any headers, and respond to OPTIONS pre-flight checks. This flag is set automatically when the script/test-server command is used.
