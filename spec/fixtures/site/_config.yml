@@ -1,25 +1,16 @@
-title: Your awesome title
-
-# Load the admin interface.
+---
+title: 天维网微信公众号广告后台
 gems:
-  - jekyll-admin
-
-# Exclude these files from being processed.
+- jekyll-admin
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-
+- Gemfile
+- Gemfile.lock
 foo: bar
-
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      some_front_matter: "default"
-
-# Dummy Collection.
+- scope:
+    path: ''
+  values:
+    some_front_matter: default
 collections:
   puppies:
     foo: bar

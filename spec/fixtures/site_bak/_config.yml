@@ -1,0 +1,26 @@
+title: Your awesome title
+
+# Load the admin interface.
+gems:
+  - jekyll-admin
+
+# Exclude these files from being processed.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+foo: bar
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      some_front_matter: "default"
+
+# Dummy Collection.
+collections:
+  puppies:
+    foo: bar
+    output: false
