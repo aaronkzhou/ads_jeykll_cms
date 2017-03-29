@@ -3,19 +3,24 @@
 	{% if post.category == category %}
 	<dl class="ls5">
 		<dd>
-			<cite><img src='{{post.logoUrl}}'></cite>
+			<cite><img id='logoUrl' src='{{post.logoUrl}}'></cite>
 		</dd>
 		<dt class="post-header">
 			<strong><a href="{{post.url}}">{{post.title}}</a></strong>
-			<p>{{post.summary}}</p>
-			<p>电话：{{post.tel}}</p>
-			<p>地址：{{post.address}}</p>
-			<p>邮箱：{{post.email}}</p>
-			<p>网站： <a href="{{post.website}}">{{post.website}}</a></p>
+			<p>业务范围: {{post.summary}}</p>
+			<p>电话: {{post.tel}}</p>
+			<p>地址: {{post.address}}</p>
+			<p>邮箱: {{post.email}}</p>
+			{% if !post.website == blank %}
+			<p>网站: <a href="{{post.website}}">{{post.website}}</a></p>
+			{% endif %}
 		</dt>
-		<dd class="colum2 post-content">
+		<div class="colum2 post-content">
 			<cite><img src='{{post.imgUrl}}'></cite>
-		</dd>
+		<div>
+		<div for="seeDetails">
+			<button id='seeDetail' onclick="{{post.logoUrl}}">查看详情</button>
+		</div>
 	</dl>
 	{% endif %}
 {% endfor %}
