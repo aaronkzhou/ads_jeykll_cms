@@ -43,16 +43,14 @@ export class Sidebar extends Component {
               {sidebar.pages}
             </Link>
           </li>
-
-          {this.renderCollections()}
-
-          <Splitter />
           <li>
-            <Link activeClassName="active" to={`${ADMIN_PREFIX}/datafiles`}>
-              <i className="fa fa-database" />
-              {sidebar.datafiles}
+            <Link activeClassName="active" to={`${ADMIN_PREFIX}/collections/posts`}>
+              <i className="fa fa-file-text" />
+              {sidebar.posts}
             </Link>
           </li>
+
+          <Splitter />
           <li>
             <Link activeClassName="active" to={`${ADMIN_PREFIX}/staticfiles`}>
               <i className="fa fa-file" />
@@ -60,12 +58,6 @@ export class Sidebar extends Component {
             </Link>
           </li>
           <Splitter />
-          <li>
-            <Link activeClassName="active" to={`${ADMIN_PREFIX}/configuration`}>
-              <i className="fa fa-cog" />
-              {sidebar.configuration}
-            </Link>
-          </li>
         </ul>
       </div>
     );

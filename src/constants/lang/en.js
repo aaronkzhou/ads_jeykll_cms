@@ -48,10 +48,10 @@ export const getFilenameNotValidMessage = () =>
 
 // sidebar titles
 export const sidebar = {
-  pages: 'Pages',
-  posts: 'Posts',
+  pages: '基础页面',
+  posts: '广告投放',
   datafiles: 'Data Files',
-  staticfiles: 'Static Files',
+  staticfiles: '图片文件',
   configuration: 'Configuration'
 };
 
