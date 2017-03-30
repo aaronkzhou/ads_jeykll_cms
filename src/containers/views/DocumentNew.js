@@ -86,6 +86,43 @@ export class DocumentNew extends Component {
               initialValue=""
               ref="editor" />
             <Splitter />
+            <div className="metafields">
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="layout" />
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={"onpage"} />
+                  </div>
+                </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="category" />
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+                </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="contact" />
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+                </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="website" />
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+                </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="address" />
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+                </div>
+              </div>
+            </div>
             <Metadata fields={{}} />
           </div>
 
