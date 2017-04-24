@@ -3,15 +3,15 @@ layout: default
 ---
 <div class="ads-onpage">
     <div class="article-header">
-        <img class="article-profile" src="{{page.article-profile-url}}">
-        <img class="article-logo" src="{{page.article-logo-url}}">
+        <img class="article-profile" src="{{page.profile-pic-url}}">
+        <img class="article-logo" src="{{page.logo-pic-url}}">
     </div>
     <hr style="border: 0; border-top: 2px dotted #B2B2B6;">
     <div class="article-content">
         <h1 class="article-title">{{page.chinese_title}}</h1>
-        <h1 class="article-title">{{page.englisth_title}}</h1>
+        <h1 class="article-title">{{page.english_title}}</h1>
         <article class="ads">
-            {{page.article-content}}
+            {{content}}
         </article>
     </div>
     <div class="article-footer">
@@ -20,7 +20,7 @@ layout: default
         <hr style="border: 0; border-top: 2px dotted #B2B2B6;">
         <p>Wechat: {{page.wechat}}</p>
         <p>Address: {{page.address}}</p>
-        <p>E: {{page.email}}</p>
-        <p>Ph: {{page.phone}}</p>
+        <p>E: {{page.contact_email}}</p>
+        <p>Ph: {{page.contact_number}}</p>
     </div>
 </div>
