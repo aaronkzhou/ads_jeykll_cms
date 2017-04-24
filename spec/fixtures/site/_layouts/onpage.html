@@ -1,7 +1,26 @@
 ---
 layout: default
 ---
-
-<article id="ads">
-	{{content}}
-<article>
+<div class="ads-onpage">
+    <div class="article-header">
+        <img class="article-profile" src="{{page.article-profile-url}}">
+        <img class="article-logo" src="{{page.article-logo-url}}">
+    </div>
+    <hr style="border: 0; border-top: 2px dotted #B2B2B6;">
+    <div class="article-content">
+        <h1 class="article-title">{{page.chinese_title}}</h1>
+        <h1 class="article-title">{{page.englisth_title}}</h1>
+        <article class="ads">
+            {{page.article-content}}
+        </article>
+    </div>
+    <div class="article-footer">
+        <img class="partner-qrcode" src="{{page.partner-qrcode-url}}">
+        <h2>扫描右方二维码添加微信</h2>
+        <hr style="border: 0; border-top: 2px dotted #B2B2B6;">
+        <p>Wechat: {{page.wechat}}</p>
+        <p>Address: {{page.address}}</p>
+        <p>E: {{page.email}}</p>
+        <p>Ph: {{page.phone}}</p>
+    </div>
+</div>

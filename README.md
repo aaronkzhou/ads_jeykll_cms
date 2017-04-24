@@ -1,4 +1,5 @@
 To install locally
+https://jekyll.github.io/jekyll-admin/development/
 
 git clone https://github.com/jekyll/jekyll-admin && cd jekyll-admin
 script/bootstrap
