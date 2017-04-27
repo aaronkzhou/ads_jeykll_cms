@@ -89,37 +89,86 @@ export class DocumentNew extends Component {
             <div className="metafields">
               <div className="metafield">
                 <div className="meta-key">
-                  <input type="text" className="field key-field" placeholder="Key" defaultValue="layout" />
-                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={"onpage"} />
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="layout" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={"onpage"} disabled />
                   </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="category" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="contact_number" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="website" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="address" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="contact_email" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="wechat" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="english_title" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="profile-pic-url" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="logo-pic-url" disabled />
+                </div>
+                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} />
+                  </div>
+              </div>
+              <div className="metafield">
+                <div className="meta-key">
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="partner-qrcode-url" disabled />
+                </div>
+                <div className="meta-value"><textarea className="field value-field" style={{height: 48}} />
                 </div>
               </div>
               <div className="metafield">
                 <div className="meta-key">
-                  <input type="text" className="field key-field" placeholder="Key" defaultValue="category" />
-                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
-                  </div>
+                  <input type="text" className="field key-field" placeholder="Key" defaultValue="chinese_title" disabled />
                 </div>
-              </div>
-              <div className="metafield">
-                <div className="meta-key">
-                  <input type="text" className="field key-field" placeholder="Key" defaultValue="contact" />
-                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
-                  </div>
-                </div>
-              </div>
-              <div className="metafield">
-                <div className="meta-key">
-                  <input type="text" className="field key-field" placeholder="Key" defaultValue="website" />
-                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
-                  </div>
-                </div>
-              </div>
-              <div className="metafield">
-                <div className="meta-key">
-                  <input type="text" className="field key-field" placeholder="Key" defaultValue="address" />
-                  <div className="meta-value"><textarea className="field value-field" style={{height: 48}} defaultValue={""} />
-                  </div>
+                <div className="meta-value"><textarea className="field value-field" style={{height: 48}} />
                 </div>
               </div>
             </div>
